@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — MyApp</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <div class="card">
+    <!-- LOGIN -->
+    <div id="loginForm">
+      <div class="card-header">
+        <h1 class="card-title">Login to your account</h1>
+        <p class="card-subtitle">Enter your credentials to login to your account</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <div class="input-wrapper">
+          <input class="form-input" type="email" id="email" placeholder="johndoe@gmail.com" autocomplete="email" />
+        </div>
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <div class="input-wrapper">
+          <input class="form-input" type="password" id="password" placeholder="********"
+            autocomplete="current-password" />
+        </div>
+        <span class="error-msg" id="passwordError"></span>
+      </div>
+
+      <button class="btn-primary" id="loginBtn" type="button">Login</button>
+
+      <p class="card-footer">
+        Don't have an account? <a href="/register.html" id="toRegister">Create an account</a>
+      </p>
+    </div>
+    <!-- SUCCESS -->
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">✓</div>
+      <h2>Login successful!</h2>
+      <p>You've been logged in to your account.</p>
+      <div class="user-badge">
+        <span class="user-badge-dot"></span>
+        <span id="loggedInName">–</span>
+      </div>
+      <button class="btn-outline" id="logoutBtn" type="button">Back to Login</button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
