@@ -3,6 +3,7 @@
 Setup and run
 ```bash
 git clone https://github.com/Dbinus/Aksub-Week1-FE.git
+cd .\Aksub-Week1-FE\
 npm install
 npm run dev
 ```
