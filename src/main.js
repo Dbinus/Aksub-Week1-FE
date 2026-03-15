@@ -20,7 +20,14 @@ function clearAllErrors(){
   });
   document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('visible'));
 }
-
+function showToast(msg, type = 'success') {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.className = `toast ${type}`;
+  void toast.offsetWidth;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
 // LOGIN
 document.getElementById('loginBtn').addEventListener('click', () => {
   clearAllErrors();

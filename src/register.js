@@ -55,12 +55,14 @@ document.getElementById('signUpBtn').addEventListener('click', () => {
   }
   if(!emailVal){
     setError('email', 'emailError', "This field can't be empty");
+    valid = false;
   } else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
     setError('email', 'emailError', 'Please enter a valid email address');
     valid = false;
   }
   if(!passwordVal){
     setError('password', 'passwordError', "This field can't be empty");
+    valid = false;
   } else if(!isValidPassword(passwordVal)){
     setError('password', 'passwordError', 'Password must be ≥8 characters, include 1 uppercase and 1 symbol');
     valid = false;
